@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.graphics.drawable.toDrawable
 import androidx.navigation.NavHostController
 import com.rajat.movies.repo.data.MovieItem
@@ -79,14 +78,4 @@ fun MovieDetailScreen(
             )
         )
     }
-}
-
-@Preview
-@Composable
-fun PreviewOppenheimerScreen() {
-    val imageUrl =
-        "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0CeGj2qvlbjZPyYvc.jpg" // Replace with the actual URL
-    val description =
-        "During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history."
-//    MovieDetailScreen(imageUrl = imageUrl, description = description)
 }

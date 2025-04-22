@@ -35,7 +35,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toDrawable
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -43,11 +42,8 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.rajat.movies.repo.MoviesApplication
 import com.rajat.movies.repo.data.MovieItem
-import java.net.URLEncoder
-import java.nio.charset.StandardCharsets
 
 @Composable
 fun MovieListScreen(navController: NavHostController) {
@@ -181,19 +177,4 @@ fun MovieItemComposable(movie: MovieItem, onClick : () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         )
     }
-}
-
-@Preview(showBackground = false)
-@Composable
-fun MovieListScreenPreview() {
-    val movies = listOf(
-        "Doctor Strange", "Oppenheimer",
-        "Dhoom", "Sholay",
-        "Golmaal", "Dhamaal"
-    )
-
-    val imageUrl =
-        "https://media.themoviedb.org/t/p/w220_and_h330_face/wv6oWAleCJZUk5htrGg413t3GCy.jpg"
-
-//    MovieListScreen(null, movies, imageUrl)
 }
