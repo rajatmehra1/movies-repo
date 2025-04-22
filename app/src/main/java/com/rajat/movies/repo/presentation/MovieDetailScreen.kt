@@ -56,7 +56,7 @@ fun MovieDetailScreen(
             model = ImageRequest.Builder(LocalContext.current).data(movie.getImageUrl())
                 .placeholder(android.graphics.Color.GRAY.toDrawable())
                 .error(android.graphics.Color.LTGRAY.toDrawable()).crossfade(true).build(),
-            contentDescription = "Oppenheimer Movie Poster",
+            contentDescription = movie.title + " Poster",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier
                 .fillMaxWidth()
